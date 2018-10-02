@@ -1,0 +1,56 @@
+<html>
+	<head>
+	<link href="style.css"
+            rel="stylesheet"
+            type="text/css"/>
+	<script type="text/javascript"
+            src="formChecker.js">
+    </script>
+	</head>
+	<body>
+			
+			<form action="customerBackend.php" method="post" onsubmit="return validateFields()" >
+						<fieldset>
+							<legend>User Info</legend>
+							Username:<br>
+							<input type="text" id="username" name="username"><br>
+							Password:<br>
+							<input type="text" id="password" name="password"><br>
+						</fieldset><br>
+						<fieldset>
+							<legend>Select products</legend>
+							Number of spoons ($1/each):
+							<input type="number" id="spoons" name="spoons"
+								min="0"/><br>
+							Number of forks ($2/each): 
+							<input type="number" id="forks" name="forks"
+								min="0"/><br>
+							Number of sporks ($3/each):
+							<input type="number" id="sporks" name="sporks"
+								min="0"/><br>
+						</fieldset><br>
+						<fieldset>
+							<legend>Shipping type</legend>
+							<br>
+							<div>
+								<input type="radio" name="shipping" id = "7day" value="Free 7 day">
+										<label for="1A">Free 7 day</label>
+							</div>
+							<div>
+								<input type="radio" name="shipping"  id = "overnight" value="$50.00 over night">
+										<label for="1B">$50.00 over night</label>
+							</div>
+							<div>
+								<input type="radio" name="shipping"  id = "threeday" value="$5.00 three day">
+										<label for="1C">$5.00 three day</label>
+							</div>
+							<br>
+						</fieldset>
+						<input type="submit" value="Submit"/>
+						<button type="reset" value="Reset">Reset</button>
+
+			</form>
+  </body>
+
+
+</html>
